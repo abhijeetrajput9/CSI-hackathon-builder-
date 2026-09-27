@@ -29,4 +29,4 @@ A responsive web platform for discovering and managing college hackathons.
 
 ## GitHub Repository
 
-[View Source Code](YOUR-GITHUB-LINK)
+[View Source Code](https://github.com/abhijeetrajput9/CSI-hackathon-builder-)
