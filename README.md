@@ -25,7 +25,7 @@ A responsive web platform for discovering and managing college hackathons.
 
 ## Live Demo
 
-[View Live Demo](YOUR-LIVE-LINK)
+[View Live Demo](https://abhijeetrajput9.github.io/CSI-hackathon-builder-/)
 
 ## GitHub Repository
 
