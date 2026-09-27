@@ -1,0 +1,773 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #050b18;
+
+    color: white;
+
+    min-height: 100vh;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: #081225;
+
+    border-bottom: 1px solid #1b2942;
+}
+
+
+.logo {
+
+    font-size: 21px;
+
+    font-weight: bold;
+}
+
+
+.logo span {
+
+    color: #7047ff;
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.nav-links a {
+
+    color: #8f9db2;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+.nav-links a:hover,
+.nav-links .active {
+
+    color: white;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 45px auto;
+}
+
+
+/* ================= HEADER ================= */
+
+.page-header {
+
+    margin-bottom: 25px;
+}
+
+
+.page-header h1 {
+
+    font-size: 34px;
+
+    margin-bottom: 8px;
+}
+
+
+.page-header p {
+
+    color: #8996aa;
+}
+
+
+/* ================= STATUS FILTER ================= */
+
+.status-filters {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.filter-btn {
+
+    background: #0b172b;
+
+    border: 1px solid #21334f;
+
+    color: #9ba8bc;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+
+.filter-btn:hover {
+
+    border-color: #7047ff;
+
+    color: white;
+}
+
+
+.filter-btn.active {
+
+    background: #7047ff;
+
+    color: white;
+
+    border-color: #7047ff;
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-section {
+
+    display: grid;
+
+    grid-template-columns: 1fr 190px 190px;
+
+    gap: 12px;
+
+    margin-bottom: 35px;
+}
+
+
+.search-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: #0a1528;
+
+    border: 1px solid #21334f;
+
+    border-radius: 9px;
+
+    padding: 0 15px;
+}
+
+
+.search-box span {
+
+    color: #78869c;
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    height: 48px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+.search-box input::placeholder {
+
+    color: #68768b;
+}
+
+
+select {
+
+    background: #0a1528;
+
+    border: 1px solid #21334f;
+
+    color: #b7c2d3;
+
+    border-radius: 9px;
+
+    padding: 0 14px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+/* ================= RESULTS ================= */
+
+.results-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+
+.results-header h2 {
+
+    font-size: 23px;
+}
+
+
+.results-header p {
+
+    color: #77869d;
+
+    font-size: 14px;
+}
+
+
+/* ================= CARD GRID ================= */
+
+.hackathon-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+/* ================= CARD ================= */
+
+.hackathon-card {
+
+    background: #0a1528;
+
+    border: 1px solid #1c2d48;
+
+    border-radius: 14px;
+
+    padding: 24px;
+
+    transition: 0.2s;
+}
+
+
+.hackathon-card:hover {
+
+    border-color: #7047ff;
+
+    transform: translateY(-3px);
+}
+
+
+/* CARD TOP */
+
+.card-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+}
+
+
+.card-top h3 {
+
+    font-size: 20px;
+
+    line-height: 1.3;
+}
+
+
+.status {
+
+    white-space: nowrap;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+.status.upcoming {
+
+    background: #063b2b;
+
+    color: #39df96;
+}
+
+
+.status.ongoing {
+
+    background: #073557;
+
+    color: #4db8ff;
+}
+
+
+.status.past {
+
+    background: #382a16;
+
+    color: #e5a74f;
+}
+
+
+/* THEME */
+
+.theme {
+
+    color: #8b98ac;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+}
+
+
+/* INFO */
+
+.info {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+
+    margin-bottom: 20px;
+}
+
+
+.info-item {
+
+    color: #7e8ca1;
+
+    font-size: 12px;
+}
+
+
+.info-item strong {
+
+    display: block;
+
+    color: #e8edf5;
+
+    font-size: 14px;
+
+    margin-top: 5px;
+}
+
+
+/* COUNTDOWN */
+
+.countdown-box {
+
+    background: #07101f;
+
+    border: 1px solid #1b2b47;
+
+    border-radius: 9px;
+
+    padding: 13px;
+
+    margin-bottom: 18px;
+}
+
+
+.countdown-title {
+
+    color: #78869b;
+
+    font-size: 11px;
+
+    margin-bottom: 5px;
+}
+
+
+.countdown {
+
+    color: #8b6cff;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+
+/* BUTTON */
+
+.card-buttons {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.register-btn,
+.details-btn {
+
+    flex: 1;
+
+    padding: 11px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+
+.register-btn {
+
+    border: none;
+
+    background: #7047ff;
+
+    color: white;
+}
+
+
+.register-btn:hover {
+
+    background: #6036ed;
+}
+
+
+.details-btn {
+
+    background: transparent;
+
+    border: 1px solid #7047ff;
+
+    color: #9b83ff;
+}
+
+
+.details-btn:hover {
+
+    background: #17102f;
+}
+
+
+/* NO RESULTS */
+
+.no-results {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: #78869c;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .search-section {
+        grid-template-columns: 1fr 160px 160px;
+    }
+
+    .hackathon-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        height: auto;
+        min-height: 65px;
+        padding: 14px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-links {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    /* CONTAINER */
+    .container {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    /* HEADER */
+    .page-header {
+        margin-bottom: 22px;
+    }
+
+    .page-header h1 {
+        font-size: 28px;
+    }
+
+    .page-header p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* STATUS FILTER */
+    .status-filters {
+        overflow-x: auto;
+        padding-bottom: 5px;
+        scrollbar-width: none;
+    }
+
+    .status-filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-btn {
+        white-space: nowrap;
+        padding: 9px 15px;
+    }
+
+    /* SEARCH */
+    .search-section {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 28px;
+    }
+
+    select {
+        height: 48px;
+        width: 100%;
+    }
+
+    /* RESULTS */
+    .results-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .results-header h2 {
+        font-size: 21px;
+    }
+
+    /* CARDS */
+    .hackathon-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .hackathon-card {
+        padding: 20px;
+    }
+
+    .card-top h3 {
+        font-size: 18px;
+    }
+
+    .theme {
+        font-size: 13px;
+    }
+
+    /* INFO */
+    .info {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    /* BUTTONS */
+    .card-buttons {
+        flex-direction: column;
+    }
+
+    .register-btn,
+    .details-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    /* NAVBAR */
+    .navbar {
+        padding: 13px 4%;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        gap: 9px 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    /* CONTAINER */
+    .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    /* HEADER */
+    .page-header h1 {
+        font-size: 25px;
+    }
+
+    .page-header p {
+        font-size: 13px;
+    }
+
+    /* FILTER */
+    .filter-btn {
+        padding: 8px 13px;
+        font-size: 12px;
+    }
+
+    /* SEARCH */
+    .search-box {
+        padding: 0 12px;
+    }
+
+    .search-box input {
+        height: 45px;
+        font-size: 13px;
+    }
+
+    select {
+        height: 45px;
+        font-size: 13px;
+    }
+
+    /* CARD */
+    .hackathon-card {
+        padding: 17px;
+        border-radius: 12px;
+    }
+
+    .card-top {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .card-top h3 {
+        font-size: 17px;
+    }
+
+    .status {
+        align-self: flex-start;
+    }
+
+    /* INFO */
+    .info {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    /* COUNTDOWN */
+    .countdown-box {
+        padding: 12px;
+    }
+
+    .countdown {
+        font-size: 15px;
+    }
+
+    /* BUTTONS */
+    .register-btn,
+    .details-btn {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 350px) {
+    .nav-links {
+        gap: 8px 10px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .page-header h1 {
+        font-size: 23px;
+    }
+
+    .hackathon-card {
+        padding: 15px;
+    }
+}

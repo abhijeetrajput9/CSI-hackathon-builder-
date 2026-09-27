@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>CSI Hackathons Builder</title>
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+
+            <div class="logo">
+                <span>&lt;/&gt;</span> CSI Hackathons Builder 
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html" class="active">Hackathons</a>
+                <a href="registration.html">Registration</a>
+                <a href="project.html">Projects</a>
+                <a href="organizer.html">Organizers</a>
+            </div>
+
+        </nav>
+
+
+        <main class="container">
+
+            <!-- HEADER -->
+            <section class="page-header">
+
+                <h1>Hackathons</h1>
+
+                <p>
+                    Find and join exciting hackathons.
+                </p>
+
+            </section>
+
+
+            <!-- STATUS FILTERS -->
+            <div class="status-filters">
+
+                <button class="filter-btn active" data-status="all">
+                    All
+                </button>
+
+                <button class="filter-btn" data-status="upcoming">
+                    Upcoming
+                </button>
+
+                <button class="filter-btn" data-status="ongoing">
+                    Ongoing
+                </button>
+
+                <button class="filter-btn" data-status="past">
+                    Past
+                </button>
+
+            </div>
+
+
+            <!-- SEARCH + FILTER -->
+            <section class="search-section">
+
+                <div class="search-box">
+
+                    <span>🔍</span>
+
+                    <input type="text" id="searchInput" placeholder="Search hackathons...">
+
+                </div>
+
+
+                <select id="themeFilter">
+
+                    <option value="all">
+                        All Themes
+                    </option>
+
+                </select>
+
+
+                <select id="sortFilter">
+
+                    <option value="newest">
+                        Sort by Newest
+                    </option>
+
+                    <option value="oldest">
+                        Sort by Oldest
+                    </option>
+
+                </select>
+
+            </section>
+
+
+            <!-- RESULTS -->
+            <div class="results-header">
+
+                <h2>Explore Hackathons</h2>
+
+                <p id="resultCount">
+                    0 hackathons
+                </p>
+
+            </div>
+
+
+            <!-- CARDS -->
+            <section class="hackathon-grid" id="hackathonContainer">
+
+            </section>
+
+
+            <!-- NO RESULT -->
+            <div id="noResults" class="no-results">
+                No hackathons found.
+            </div>
+
+        </main>
+
+
+        <script src="js/indexx.js"></script>
+
+    </body>
+
+</html>

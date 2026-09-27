@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>CSI Hackathons Builder - Organizer</title>
+
+        <link rel="stylesheet" href="css/organizer.css">
+    </head>
+
+    <body>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+
+            <div class="logo">
+                <span>&lt;/&gt;</span> CSI Hackathons Builder
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Hackathons</a>
+                <a href="registration.html">Registration</a>
+                <a href="project.html">Projects</a>
+                <a href="organizer.html" class="active">Organizers</a>
+            </div>
+
+        </nav>
+
+
+        <main class="container">
+
+            <!-- Page heading -->
+            <div class="page-header">
+
+                <div>
+                    <h1>Manage Hackathons</h1>
+                    <p>Add, edit and manage your hackathons.</p>
+                </div>
+
+            </div>
+
+            <!-- Add / Edit Form -->
+            <section class="form-section">
+                <h2 id="formTitle">Add New Hackathon</h2>
+                <form id="hackathonForm">
+                    <input type="hidden" id="editId">
+                    <div class="form-grid">
+                        <!-- Hackathon Name -->
+                        <div class="form-group full">
+                            <label for="name">Hackathon Name</label>
+                            <input type="text" id="name" placeholder="Example: CodeSprint 2026" required>
+                        </div>
+                        <!-- Date -->
+                        <div class="form-group">
+                            <label for="date">Hackathon Date</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <!-- Deadline -->
+                        <div class="form-group">
+                            <label for="deadline">Registration Deadline</label>
+                            <input type="datetime-local" id="deadline" required>
+                        </div>
+                        <!-- Theme -->
+                        <div class="form-group">
+                            <label for="theme">Theme</label>
+                            <input type="text" id="theme" placeholder="AI & Machine Learning" required>
+                        </div>
+                        <!-- Eligibility -->
+                        <div class="form-group">
+                            <label for="eligibility">Eligibility</label>
+                            <input type="text" id="eligibility" placeholder="Students and professionals" required>
+                        </div>
+                        <!-- Team Size -->
+                        <div class="form-group">
+                            <label for="teamSize">Team Size</label>
+                            <input type="text" id="teamSize" placeholder="2 - 4 members" required>
+                        </div>
+                        <!-- Prize -->
+                        <div class="form-group">
+                            <label for="prize">Prize Pool</label>
+                            <input type="text" id="prize" placeholder="₹5,00,000" required>
+                        </div>
+                        <!-- Status -->
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select id="status" required>
+                                <option value="upcoming">Upcoming</option>
+                                <option value="ongoing">Ongoing</option>
+                                <option value="past">Past</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="btn primary" id="submitButton">
+                            Add Hackathon
+                        </button>
+                        <button type="button" class="btn cancel" id="cancelButton" style="display:none;">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <section class="hackathon-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Hackathons</h2>
+                    <p id="hackathonCount">0 hackathons</p>
+                </div>
+            </div>
+
+            <div class="hackathon-grid" id="hackathonContainer">
+                <!-- All added hackathons appear here -->
+            </div>
+
+        </section>
+
+        <script src="js/organizer.js"></script>
+
+    </body>
+
+</html>

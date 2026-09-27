@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSI Hackathons Builder-Registration</title>
+
+    <link rel="stylesheet" href="css/registration.css">
+</head>
+
+<body>
+ <nav class="navbar">
+
+            <div class="logo">
+                <span>&lt;/&gt;</span> CSI Hackathons Builder 
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html"  >Hackathons</a>
+                <a href="registration.html" class="active">Registration</a>
+                <a href="project.html">Projects</a>
+                <a href="organizer.html">Organizers</a>
+            </div>
+
+        </nav>
+    <div class="registration-container">
+
+        <h1>Hackathon Registration</h1>
+        <p class="subtitle">Create a team or join an existing team</p>
+
+
+        <!-- ================= CREATE TEAM ================= -->
+
+        <div class="registration-card">
+
+            <h2>Create a Team</h2>
+
+            <form id="createTeamForm">
+
+                <!-- Hackathon -->
+                <div class="form-group">
+                    <label for="hackathon">Choose Hackathon</label>
+
+                    <select id="hackathon" required>
+                        <option value="">Select Hackathon</option>
+
+                        <option value="Prompt 2 Product MLH">
+                            Prompt 2 Product MLH
+                        </option>
+
+                        <option value="Smart India Hackathon">
+                            Smart India Hackathon
+                        </option>
+
+                        <option value="Web Development Hackathon">
+                            Web Development Hackathon
+                        </option>
+                    </select>
+                </div>
+
+
+                <!-- Team Name -->
+                <div class="form-group">
+                    <label for="teamName">Team Name</label>
+
+                    <input
+                        type="text"
+                        id="teamName"
+                        placeholder="Enter team name"
+                        required
+                    >
+                </div>
+
+
+                <!-- Team Size -->
+                <div class="form-group">
+                    <label for="teamSize">Team Size</label>
+
+                    <select id="teamSize" required>
+                        <option value="">Select Team Size</option>
+                        <option value="1">1 Member</option>
+                        <option value="2">2 Members</option>
+                        <option value="3">3 Members</option>
+                        <option value="4">4 Members</option>
+                    </select>
+                </div>
+
+
+                <!-- Team Leader -->
+                <div class="form-group">
+                    <label for="teamLeader">Team Leader</label>
+
+                    <input
+                        type="text"
+                        id="teamLeader"
+                        placeholder="Enter team leader name"
+                        required
+                    >
+                </div>
+
+
+                <!-- Team Leader Email -->
+                <div class="form-group">
+                    <label for="leaderEmail">Leader Email</label>
+
+                    <input
+                        type="email"
+                        id="leaderEmail"
+                        placeholder="Enter email"
+                        required
+                    >
+                </div>
+
+
+                <!-- Members -->
+                <div class="form-group">
+
+                    <label>Team Members</label>
+
+                    <input
+                        type="text"
+                        id="member1"
+                        placeholder="Member 1"
+                    >
+
+                    <input
+                        type="text"
+                        id="member2"
+                        placeholder="Member 2"
+                    >
+
+                    <input
+                        type="text"
+                        id="member3"
+                        placeholder="Member 3"
+                    >
+
+                </div>
+
+
+                <button type="submit" class="primary-btn">
+                    Create Team
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- ================= AVAILABLE TEAMS ================= -->
+
+        <div class="registration-card">
+
+            <h2>Available Teams</h2>
+
+            <div id="teamList">
+
+                <!-- Teams will be added using JavaScript -->
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= JOIN TEAM ================= -->
+
+        <div class="registration-card join-card">
+
+            <h2>Join a Team</h2>
+
+            <form id="joinTeamForm">
+
+                <div class="form-group">
+
+                    <label for="joinTeamName">
+                        Selected Team
+                    </label>
+
+                    <input
+                        type="text"
+                        id="joinTeamName"
+                        readonly
+                        placeholder="Click Join Team above"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="joinMemberName">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="joinMemberName"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="joinMemberEmail">
+                        Your Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="joinMemberEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <button type="submit" class="primary-btn">
+                    Join Team
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/registration.js"></script>
+
+</body>
+</html>

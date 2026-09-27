@@ -1,0 +1,721 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #050b18;
+    color: #ffffff;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: #081225;
+
+    border-bottom: 1px solid #1b2942;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #7047ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #9ca9bd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #ffffff;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 40px auto;
+}
+
+
+/* ================= HEADER ================= */
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: #8794a9;
+}
+
+
+/* ================= FORM ================= */
+
+.form-section {
+    background: #0a1528;
+
+    border: 1px solid #1c2b45;
+
+    border-radius: 14px;
+
+    padding: 28px;
+
+    margin-bottom: 45px;
+}
+
+.form-section h2 {
+    margin-bottom: 25px;
+}
+
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+
+.form-group label {
+    font-size: 14px;
+
+    color: #b9c4d5;
+
+    margin-bottom: 8px;
+}
+
+
+.form-group input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border-radius: 8px;
+
+    border: 1px solid #253754;
+
+    background: #07101f;
+
+    color: white;
+
+    outline: none;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 13px 14px;
+    border-radius: 8px;
+    border: 1px solid #253754;
+    background: #07101f;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    border-color: #7047ff;
+}
+
+.form-group select option {
+    background: #07101f;
+    color: white;
+}
+
+.form-group input:focus {
+    border-color: #7047ff;
+}
+
+
+.form-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.btn {
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+
+.primary {
+    background: #7047ff;
+
+    color: white;
+}
+
+
+.primary:hover {
+    background: #6036ed;
+}
+
+
+.cancel {
+    background: #18243a;
+
+    color: white;
+}
+
+
+/* ================= SECTION ================= */
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    font-size: 25px;
+}
+
+.section-heading p {
+    color: #7f8da4;
+
+    margin-top: 5px;
+}
+
+
+/* ================= CARDS ================= */
+
+.hackathon-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+.hackathon-card {
+    background: #0a1528;
+
+    border: 1px solid #1c2b45;
+
+    border-radius: 14px;
+
+    padding: 24px;
+
+    transition: 0.2s;
+}
+
+
+.hackathon-card:hover {
+    border-color: #7047ff;
+
+    transform: translateY(-3px);
+}
+
+
+/* Card top */
+
+.card-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 15px;
+}
+
+
+.card-top h3 {
+    font-size: 21px;
+
+    max-width: 70%;
+}
+
+
+.status {
+    background: #063b2b;
+    color: #3ce49a;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status.ongoing {
+    background: #392d05;
+    color: #ffd45c;
+}
+
+.status.past {
+    background: #302438;
+    color: #b9a1c9;
+}
+
+.status.upcoming {
+    background: #063b2b;
+    color: #3ce49a;
+}
+
+
+/* Theme */
+
+.theme {
+    color: #8e9bb0;
+
+    margin-bottom: 18px;
+}
+
+
+/* Information */
+
+.info {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+.info-item {
+    color: #9ba8bc;
+
+    font-size: 13px;
+}
+
+
+.info-item strong {
+    display: block;
+
+    color: white;
+
+    font-size: 14px;
+
+    margin-top: 4px;
+}
+
+
+/* Countdown */
+
+.countdown-box {
+    background: #07101f;
+
+    border: 1px solid #1b2b47;
+
+    border-radius: 9px;
+
+    padding: 14px;
+
+    margin-bottom: 18px;
+}
+
+
+.countdown-title {
+    color: #8794a9;
+
+    font-size: 12px;
+
+    margin-bottom: 6px;
+}
+
+
+.countdown {
+    color: #8b6cff;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* Buttons */
+
+.card-buttons {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.card-buttons button {
+    flex: 1;
+
+    padding: 10px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+
+.register-btn {
+    background: #7047ff;
+
+    color: white;
+
+    border: none;
+}
+
+
+.edit-btn {
+    background: transparent;
+
+    color: #8b6cff;
+
+    border: 1px solid #7047ff;
+}
+
+
+.delete-btn {
+    background: transparent;
+
+    color: #ff6678;
+
+    border: 1px solid #6d2935;
+}
+
+
+/* ================= RESPONSIVE ================= */
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .form-grid {
+        gap: 16px;
+    }
+
+    .hackathon-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        height: auto;
+        min-height: 65px;
+        padding: 14px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-links {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    /* CONTAINER */
+    .container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    /* HEADER */
+    .page-header {
+        margin-bottom: 22px;
+    }
+
+    .page-header h1 {
+        font-size: 27px;
+    }
+
+    .page-header p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* FORM */
+    .form-section {
+        padding: 22px;
+        margin-bottom: 35px;
+    }
+
+    .form-section h2 {
+        font-size: 21px;
+        margin-bottom: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 12px;
+    }
+
+    /* FORM BUTTONS */
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .form-buttons .btn {
+        width: 100%;
+    }
+
+    /* SECTION */
+    .section-heading h2 {
+        font-size: 22px;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+    }
+
+    /* CARDS */
+    .hackathon-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .hackathon-card {
+        padding: 20px;
+    }
+
+    /* CARD TOP */
+    .card-top {
+        gap: 10px;
+    }
+
+    .card-top h3 {
+        font-size: 19px;
+        max-width: 70%;
+    }
+
+    /* INFO */
+    .info {
+        grid-template-columns: 1fr 1fr;
+        gap: 13px;
+    }
+
+    /* COUNTDOWN */
+    .countdown-box {
+        padding: 13px;
+    }
+
+    .countdown {
+        font-size: 16px;
+    }
+
+    /* CARD BUTTONS */
+    .card-buttons {
+        flex-direction: column;
+    }
+
+    .card-buttons button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    /* NAVBAR */
+    .navbar {
+        padding: 13px 4%;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        gap: 9px 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    /* CONTAINER */
+    .container {
+        width: 94%;
+        margin: 22px auto;
+    }
+
+    /* HEADER */
+    .page-header h1 {
+        font-size: 24px;
+    }
+
+    .page-header p {
+        font-size: 13px;
+    }
+
+    /* FORM */
+    .form-section {
+        padding: 17px;
+        border-radius: 11px;
+    }
+
+    .form-section h2 {
+        font-size: 19px;
+    }
+
+    .form-grid {
+        gap: 14px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 11px;
+        font-size: 13px;
+    }
+
+    /* SECTION */
+    .section-heading h2 {
+        font-size: 21px;
+    }
+
+    /* CARD */
+    .hackathon-card {
+        padding: 17px;
+        border-radius: 12px;
+    }
+
+    .card-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .card-top h3 {
+        font-size: 17px;
+        max-width: 100%;
+    }
+
+    .status {
+        font-size: 11px;
+    }
+
+    /* INFO */
+    .info {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .info-item {
+        font-size: 12px;
+    }
+
+    .info-item strong {
+        font-size: 13px;
+    }
+
+    /* COUNTDOWN */
+    .countdown-title {
+        font-size: 11px;
+    }
+
+    .countdown {
+        font-size: 15px;
+    }
+
+    /* BUTTONS */
+    .card-buttons button {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 350px) {
+    .nav-links {
+        gap: 8px 10px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .page-header h1 {
+        font-size: 22px;
+    }
+
+    .form-section {
+        padding: 14px;
+    }
+
+    .hackathon-card {
+        padding: 14px;
+    }
+}

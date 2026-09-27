@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> CSI Hackathons Builder- Project Submission</title>
+        <link rel="stylesheet" href="css/project.css">
+    </head>
+
+    <body>
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="hackathons.html" class="navbar-brand">CSI Hackathon Builder</a>
+                <div class="nav-links">
+                    <a href="index.html">Hackathons</a>
+                    <a href="registration.html">Registration</a>
+                    <a href="project.html" class="active">Projects</a>
+                    <a href="organizer.html">Organizers</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="project-container">
+
+            <!-- PAGE TITLE -->
+            <div class="page-heading">
+                <p class="small-title">PROJECT SUBMISSION</p>
+                <h1>Submit Your Project</h1>
+                <p>Showcase your hackathon project and share it with the organizers.</p>
+            </div>
+
+            <!-- HACKATHON & TEAM -->
+            <section class="info-card">
+                <div class="info-item">
+                    <span>Hackathon</span>
+                    <strong id="selectedHackathon">Select Hackathon</strong>
+                </div>
+                <div class="info-item">
+                    <span>Team</span>
+                    <strong id="selectedTeam">No Team Selected</strong>
+                </div>
+                <div class="info-item">
+                    <span>Team Leader</span>
+                    <strong id="teamLeader">-</strong>
+                </div>
+            </section>
+
+            <!-- PROJECT FORM -->
+            <section class="project-card">
+                <h2>Project Details</h2>
+                <p class="section-text">Enter the details of your hackathon project.</p>
+
+                <form id="projectForm">
+
+                    <!-- HACKATHON -->
+                    <div class="form-group">
+                        <label for="hackathon">Hackathon</label>
+                        <select id="hackathon" required>
+                            <option value="">Select Hackathon</option>
+                        </select>
+                    </div>
+
+                    <!-- PROJECT NAME -->
+                    <div class="form-group">
+                        <label for="projectName">Project Name</label>
+                        <input type="text" id="projectName" placeholder="Enter your project name" required>
+                    </div>
+
+                    <!-- CATEGORY -->
+                    <div class="form-group">
+                        <label for="category">Project Category</label>
+                        <select id="category" required>
+                            <option value="">Select Category</option>
+                            <option value="AI & Machine Learning">AI & Machine Learning</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Mobile Development">Mobile Development</option>
+                            <option value="Cybersecurity">Cybersecurity</option>
+                            <option value="IoT">IoT</option>
+                            <option value="Blockchain">Blockchain</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <div class="form-group">
+                        <label for="description">Project Description</label>
+                        <textarea id="description" rows="6"
+                            placeholder="Explain your project, the problem it solves and how it works..."
+                            required></textarea>
+                    </div>
+
+                    <!-- TECH STACK -->
+                    <div class="form-group">
+                        <label for="techStack">Tech Stack</label>
+                        <input type="text" id="techStack" placeholder="Example: HTML, CSS, JavaScript, Node.js, MongoDB"
+                            required>
+                        <small>Separate technologies using commas.</small>
+                    </div>
+
+                    <!-- GITHUB -->
+                    <div class="form-group">
+                        <label for="github">GitHub Repository</label>
+                        <input type="url" id="github" placeholder="https://github.com/username/project" required>
+                    </div>
+
+                    <!-- DEMO -->
+                    <div class="form-group">
+                        <label for="demo">Live Demo</label>
+                        <input type="url" id="demo" placeholder="https://your-project.vercel.app">
+                    </div>
+
+                    <!-- SUBMIT -->
+                    <button type="submit" class="submit-btn">Submit Project</button>
+
+                </form>
+            </section>
+
+            <!-- SUBMISSION STATUS -->
+            <section class="status-card" id="statusCard" style="display:none;">
+                <div class="success-icon">✓</div>
+                <h2>Project Submitted Successfully!</h2>
+                <p>Your project has been saved for this hackathon.</p>
+
+                <div class="submitted-info">
+                    <p><strong>Project:</strong> <span id="submittedProject"></span></p>
+                    <p><strong>Team:</strong> <span id="submittedTeam"></span></p>
+                    <p><strong>Status:</strong> <span class="submitted-status">Submitted</span></p>
+                    <p><strong>Submitted On:</strong> <span id="submittedDate"></span></p>
+                </div>
+
+                <button id="editProjectBtn" class="edit-btn">Edit Project</button>
+            </section>
+
+        </main>
+
+        <script src="js/project.js"></script>
+    </body>
+
+</html>

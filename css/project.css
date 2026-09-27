@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #050b18;
+    color: #fff;
+}
+
+/* NAVBAR */
+
+.navbar {
+    height: 70px;
+    background: #071225;
+    border-bottom: 1px solid #1d2a42;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.navbar-brand::before {
+    content: "</>";
+    color: #754cff;
+    margin-right: 8px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #8793ad;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #fff;
+}
+
+/* CONTAINER */
+
+.project-container {
+    width: 90%;
+    max-width: 950px;
+    margin: 40px auto;
+}
+
+/* PAGE TITLE */
+
+.page-heading {
+    margin-bottom: 30px;
+}
+
+.small-title {
+    color: #805cff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.page-heading h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.page-heading p {
+    color: #8995ae;
+}
+
+/* INFO CARD */
+
+.info-card {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+    background: #0b1528;
+    border: 1px solid #1d2c46;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 25px;
+}
+
+.info-item span {
+    display: block;
+    color: #78859e;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.info-item strong {
+    font-size: 16px;
+}
+
+/* PROJECT CARD */
+
+.project-card {
+    background: #0b1528;
+    border: 1px solid #1d2c46;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 25px;
+}
+
+.project-card h2 {
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.section-text {
+    color: #7f8ca6;
+    margin-bottom: 25px;
+}
+
+/* FORM */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #cbd3e2;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #071225;
+    border: 1px solid #2a3a58;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #66738d;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #7048ff;
+    box-shadow: 0 0 0 2px rgba(112, 72, 255, .15);
+}
+
+.form-group small {
+    display: block;
+    color: #68758e;
+    margin-top: 6px;
+}
+
+/* SUBMIT BUTTON */
+
+.submit-btn {
+    width: 100%;
+    padding: 13px;
+    border: 0;
+    border-radius: 8px;
+    background: #7048ff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #805dff;
+}
+
+/* STATUS */
+
+.status-card {
+    background: #0b1528;
+    border: 1px solid #244d45;
+    border-radius: 12px;
+    padding: 28px;
+    text-align: center;
+}
+
+.success-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #063c2b;
+    color: #22d39b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.status-card h2 {
+    margin-bottom: 8px;
+}
+
+.status-card>p {
+    color: #8995ae;
+}
+
+.submitted-info {
+    text-align: left;
+    background: #071225;
+    border: 1px solid #1d2c46;
+    border-radius: 8px;
+    padding: 18px;
+    margin-top: 20px;
+}
+
+.submitted-info p {
+    color: #9ba6bb;
+    margin-bottom: 10px;
+}
+
+.submitted-info p:last-child {
+    margin-bottom: 0;
+}
+
+.submitted-info strong {
+    color: #fff;
+}
+
+.submitted-status {
+    color: #22d39b;
+}
+
+.edit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid #7048ff;
+    border-radius: 7px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background: #7048ff;
+}
+
+/* MOBILE */
+
+@media(max-width:700px) {
+    .nav-container {
+        width: 94%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .project-container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .page-heading h1 {
+        font-size: 29px;
+    }
+
+    .info-card {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:700px) {
+
+    /* NAVBAR */
+    .navbar {
+        height: auto;
+        padding: 14px 0;
+    }
+
+    .nav-container {
+        width: 94%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    /* PROJECT CONTAINER */
+    .project-container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    /* PAGE HEADING */
+    .page-heading h1 {
+        font-size: 29px;
+    }
+
+    .page-heading p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* INFO CARD */
+    .info-card {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* PROJECT CARD */
+    .project-card {
+        padding: 20px;
+    }
+
+    /* STATUS CARD */
+    .status-card {
+        padding: 20px;
+    }
+}
+
+
+@media(max-width:500px) {
+
+    /* NAVBAR */
+    .navbar {
+        padding: 13px 0;
+    }
+
+    .nav-container {
+        width: 94%;
+        gap: 12px;
+    }
+
+    .navbar-brand {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        gap: 9px 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    /* PAGE */
+    .project-container {
+        width: 94%;
+        margin: 22px auto;
+    }
+
+    .page-heading {
+        margin-bottom: 22px;
+    }
+
+    .page-heading h1 {
+        font-size: 26px;
+    }
+
+    .small-title {
+        font-size: 11px;
+    }
+
+    /* CARDS */
+    .project-card {
+        padding: 17px;
+    }
+
+    .info-card {
+        padding: 17px;
+    }
+
+    .status-card {
+        padding: 18px;
+    }
+
+    /* BUTTON */
+    .edit-btn {
+        width: 100%;
+    }
+}
